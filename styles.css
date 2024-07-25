@@ -1,0 +1,236 @@
+/* Basic reset and font setup */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Container styling */
+.container {
+    display: flex;
+    flex-direction: row; /* Make main content move with drawer */
+    height: 100vh;
+    transition: margin-left 0.3s ease; /* Smooth transition for content */
+}
+
+/* Drawer styling */
+.drawer {
+    width: 250px;
+    height: 100%;
+    background-color: #222;
+    color: #fff;
+    transition: transform 0.3s ease; /* Smooth transition for drawer */
+    transform: translateX(-100%); /* Hidden by default */
+    position: absolute; /* Removed from document flow */
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Push footer to bottom */
+}
+
+.drawer ul {
+    list-style: none;
+    padding: 10px 0;
+    flex: 1; /* Expand to fill available space */
+}
+
+.drawer ul li {
+    padding: 10px 20px;
+}
+
+.drawer ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+    display: flex; /* Use flex to align toggle icon */
+    justify-content: space-between; /* Space between text and icon */
+    align-items: center; /* Vertically align icon */
+}
+
+.drawer ul li a:hover {
+    background-color: #444;
+}
+
+/* Submenu styling */
+.submenu-list {
+    list-style: none;
+    padding-left: 20px; /* Indent submenu items */
+    display: none; /* Hidden by default */
+    transition: max-height 0.3s ease; /* Smooth transition for open/close */
+    overflow: hidden; /* Hide overflow during transition */
+    max-height: 0; /* Start with no height */
+}
+
+.submenu.open .submenu-list {
+    display: block; /* Show submenu */
+    max-height: 200px; /* Allow room for expansion */
+}
+
+/* Rotate the toggle icon for open state */
+.submenu.open .toggle-icon {
+    transform: rotate(180deg);
+    transition: transform 0.3s ease;
+}
+
+/* Drawer Footer styling */
+.drawer-footer {
+    padding: 20px;
+    display: flex;
+    justify-content: space-around; /* Evenly space icons */
+    background-color: #111; /* Slightly darker background */
+}
+
+.footer-icon {
+    color: #fff;
+    font-size: 1.5rem;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-icon:hover {
+    color: #bbb; /* Lighter color on hover */
+}
+
+/* Main Wrapper styling */
+.main-wrapper {
+    flex: 1;
+    transition: margin-left 0.3s ease; /* Smooth transition for main content */
+}
+
+/* Top Bar styling */
+.top-bar {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.top-bar h1 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.menu-button {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* Main content styling */
+.main-content {
+    padding: 20px;
+    flex: 1;
+    background-color: #f5f5f5;
+}
+
+.main-content #content {
+    max-width: 800px;
+    margin: auto;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 1rem;
+    line-height: 1.0;
+}
+
+/* Show drawer and move content */
+.show-drawer .drawer {
+    transform: translateX(0); /* Slide drawer into view */
+}
+
+.show-drawer .main-wrapper {
+    margin-left: 250px; /* Shift main content to the right */
+}
+
+/* Form styling */
+form {
+    margin-bottom: 20px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 8px;
+    font-size: 1rem;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+}
+
+/* Button styling */
+.btn {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+/* Table styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+thead th {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: left;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #f9f9f9;
+}
+
+tbody td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.edit-btn,
+.delete-btn {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    margin-right: 5px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.edit-btn:hover,
+.delete-btn:hover {
+    background-color: #0056b3;
+}

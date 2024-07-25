@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LX-TOOLS</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Add FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap">
+</head>
+<body>
+    <div class="container">
+        <!-- Navigation Drawer -->
+        <nav id="drawer" class="drawer">
+            <ul class="nav-menu">
+                <li><a href="#" data-page="index.html" id="dashboardLink">Dashboard</a></li>
+                <li class="submenu">
+                    <a href="#" data-toggle="submenu" id="generalLink">General Info <i class="fas fa-chevron-down toggle-icon"></i></a>
+                    <ul class="submenu-list">
+                        <li><a href="#" data-page="personnel.html" id="personnelLink">Personnel</a></li>
+                        <li><a href="#" id="eventInfoLink">Event Information</a></li>
+                        <li><a href="#" id="colourCodesLink">Colour Codes</a></li>
+                        <li><a href="#" id="rendersLink">Plots and Renders</a></li>
+                    </ul>
+                </li>
+                <li class="submenu">
+                    <a href="#" data-toggle="submenu" id="fixturesLink">Fixtures <i class="fas fa-chevron-down toggle-icon"></i></a>
+                    <ul class="submenu-list">
+                        <li><a href="#" id="fixturePatchLink">Fixture Patch</a></li>
+                    </ul>
+                </li>
+                <li class="submenu">
+                    <a href="#" data-toggle="submenu" id="powerLink">Power <i class="fas fa-chevron-down toggle-icon"></i></a>
+                    <ul class="submenu-list">
+                        <li><a href="#" id="powerPatchLink">Power Patch</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <!-- Footer section for icons -->
+            <div class="drawer-footer">
+                <a href="#" class="footer-icon" title="Settings"><i class="fas fa-cog"></i></a>
+                <a href="#" class="footer-icon" title="Help"><i class="fas fa-question-circle"></i></a>
+                <a href="#" class="footer-icon" title="Contact Us"><i class="fas fa-phone"></i></a>
+            </div>
+        </nav>
+
+        <!-- Main Wrapper containing Top Bar and Main Content -->
+        <div class="main-wrapper">
+            <!-- Top Bar -->
+            <header class="top-bar">
+                <h1>LX-TOOLS</h1>
+                <button id="menuButton" class="menu-button">☰</button>
+            </header>
+
+            <!-- Main Content Area -->
+            <main class="main-content">
+                <div id="content">
+                    <h2>Welcome to LX-TOOLS</h2>
+                    <p>This is the main content area.</p>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <!-- Load renderer.js before personnel.js -->
+    <script src="renderer.js"></script>
+    <script src="personnel.js"></script>
+</body>
+</html>

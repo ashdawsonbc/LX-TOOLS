@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personnel Management</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="personnelContent" class="main-content">
+        <h2>Personnel Management</h2>
+        <form id="personnelForm">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="number">Number:</label>
+                <input type="text" id="number" name="number" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="jobRole">Job Role:</label>
+                <input type="text" id="jobRole" name="jobRole" required>
+            </div>
+            <button type="submit" class="btn">Add Personnel</button>
+        </form>
+
+        <table id="personnelTable">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Number</th>
+                    <th>Email</th>
+                    <th>Job Role</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Dynamic personnel rows will be added here -->
+            </tbody>
+        </table>
+    </div>
+    <script src="personnel.js"></script>
+</body>
+</html>
