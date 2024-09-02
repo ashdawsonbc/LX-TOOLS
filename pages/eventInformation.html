@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Information</title>
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+    <div class="main-content">
+        <h2>Event Information</h2>
+        <form id="eventForm">
+            <div class="form-group">
+                <label for="eventName">Event Name:</label>
+                <input type="text" id="eventName" name="eventName" required>
+            </div>
+
+            <div class="form-group">
+                <label for="eventType">Event Type:</label>
+                <select id="eventType" name="eventType" required>
+                    <option value="">Select an event type</option>
+                    <option value="oneOffShow">One Off Show</option>
+                    <option value="tour">Tour</option>
+                    <option value="corporateEvent">Corporate Event</option>
+                    <option value="theatreShow">Theatre Show</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="schedule">Schedule:</label>
+                <div id="schedule">
+                    <!-- Schedule items will be dynamically added here -->
+                </div>
+                <button type="button" id="addScheduleItem">Add Schedule Item</button>
+            </div>
+
+            <div class="form-actions">
+                <button id="submit">Save Event</button>
+            </div>
+        </form>
+    </div>
+
+    <script src="scripts/eventinfo.js"></script>
+
+</body>
+</html>

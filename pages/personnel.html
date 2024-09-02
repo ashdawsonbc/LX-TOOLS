@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personnel Management</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .main-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        th, td {
+            padding: 10px;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+        th {
+            background-color: #f4f4f4;
+        }
+        .btn {
+            padding: 10px 15px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .btn:hover {
+            background-color: #0056b3;
+        }
+        .edit-btn, .delete-btn, .save-btn {
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .edit-btn {
+            color: #ffc107;
+        }
+        .delete-btn {
+            color: #dc3545;
+        }
+        .save-btn {
+            color: #28a745;
+        }
+        .edit-btn::before {
+            content: '✎'; /* Pencil icon for edit */
+        }
+        .save-btn::before {
+            content: '✔'; /* Green tick */
+        }
+        .delete-btn::before {
+            content: '✘'; /* Red cross */
+        }
+        .non-editable {
+            pointer-events: none;
+            background-color: #f9f9f9;
+        }
+    </style>
+</head>
+<body>
+    <div class="main-content">
+        <h2>Personnel Management</h2>
+        <table id="personnelTable">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Number</th>
+                    <th>Email</th>
+                    <th>Job Role</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td contenteditable="false" class="non-editable">John Doe</td>
+                    <td contenteditable="false" class="non-editable">
+                        <select disabled>
+                            <option value="+1">+1 (US)</option>
+                            <option value="+44">+44 (UK)</option>
+                            <option value="+91">+91 (India)</option>
+                            <!-- Add more dialing codes as needed -->
+                        </select>
+                        1234567890
+                    </td>
+                    <td contenteditable="false" class="non-editable">john.doe@example.com</td>
+                    <td contenteditable="false" class="non-editable">Developer</td>
+                    <td>
+                        <button class="edit-btn"></button>
+                        <button class="save-btn"></button>
+                        <button class="delete-btn"></button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <button id="addRowBtn" class="btn">Add New Member</button>
+    </div>
+    <script src="scripts/personnel.js"></script>
+</body>
+</html>

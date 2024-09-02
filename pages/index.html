@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LX-TOOLS</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <!-- Add FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap">
+</head>
+<body>
+    <div class="container">
+        <!-- Navigation Drawer -->
+        <nav id="drawer" class="drawer">
+            <div class="logo-container">
+                <img src="media/Logo Small.png" alt="Logo" class="logo">
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#" data-page="dashboard.html" id="dashboardLink">Dashboard</a></li>
+                <li class="submenu">
+                    <a href="#" data-toggle="submenu" id="generalLink">General Info <i class="fas fa-chevron-down toggle-icon"></i></a>
+                    <ul class="submenu-list">
+                        <li><a href="#" data-page="personnel.html" id="personnelLink">Personnel</a></li>
+                        <li><a href="#" data-page="eventInformation.html" id="eventInfoLink">Event Information</a></li>
+                        <li><a href="#" data-page="colourcodes.html" id="colourCodesLink">Colour Codes</a></li>
+                        <li><a href="#" data-page="imports.html" id="rendersLink">Plots and Renders</a></li>
+                    </ul>
+                </li>
+                <li class="submenu">
+                    <a href="#" data-toggle="submenu" id="fixturesLink">Fixtures <i class="fas fa-chevron-down toggle-icon"></i></a>
+                    <ul class="submenu-list">
+                        <li><a href="#" data-page="fixturePatch.html" id="fixturePatchLink">Fixture Patch</a></li>
+                    </ul>
+                </li>
+                <li class="submenu">
+                    <a href="#" data-toggle="submenu" id="powerLink">Power <i class="fas fa-chevron-down toggle-icon"></i></a>
+                    <ul class="submenu-list">
+                        <li><a href="#" data-page="socaPatch.html" id="powerPatchLink">Power Patch</a></li>
+                    </ul>
+                </li>
+                <li class="submenu">
+                    <a href="#" data-toggle="submenu" id="networkLink">Networking <i class="fas fa-chevron-down toggle-icon"></i></a>
+                    <ul class="submenu-list">
+                        <li><a href="#" data-page="networkStage.html" id="networkStageLink">Stage</a></li>
+                        <li><a href="#" data-page="networkFOH.html" id="networkFOHLink">FOH</a></li>
+                    </ul>
+                </li>
+                <li class="submenu">
+                    <a href="#" data-toggle="submenu" id="cablesLink">Cables <i class="fas fa-chevron-down toggle-icon"></i></a>
+                    <ul class="submenu-list">
+                        <li><a href="#" data-page="cables.html" id="cablesLink">Cable Pull</a></li>
+                        <li><a href="#" data-page="feeders.html" id="feedersLink">Feeder Allocation</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <!-- Footer section for icons -->
+            <div class="drawer-footer">
+                <a href="#" class="footer-icon" title="Settings"><i class="fas fa-cog"></i></a>
+                <a href="#" class="footer-icon" title="Help"><i class="fas fa-question-circle"></i></a>
+                <a href="#" class="footer-icon" title="Contact Us"><i class="fas fa-phone"></i></a>
+                <a href="#" class="footer-icon" title="Users"><i class="fas fa-users"></i></a>
+            </div>
+        </nav>
+
+        <!-- Main Wrapper containing Top Bar and Main Content -->
+        <div class="main-wrapper">
+            <!-- Top Bar -->
+            <header class="top-bar">
+                <button id="menuButton" class="menu-button">☰</button>
+                <h1>DPL Live Project Manager</h1>
+            </header>
+
+            <!-- Main Content Area -->
+            <main class="main-content">
+                <div id="content">
+                    <h2>Welcome to LX-TOOLS</h2>
+                    <p>This is the main content area.</p>
+                </div>
+            </main>
+        </div>
+    </div>
+    <!-- Load JavaScript at the end of the body -->
+    <script src="scripts/renderer.js"></script>
+</body>
+</html>
