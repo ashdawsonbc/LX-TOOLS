@@ -8,39 +8,65 @@
 </head>
 <body>
     <div class="main-content">
-        <h2>Event Information</h2>
+        <h1>Event Information</h1>
         <form id="eventForm">
+            <!-- Event Name -->
             <div class="form-group">
                 <label for="eventName">Event Name:</label>
-                <input type="text" id="eventName" name="eventName" required>
+                <input type="text" id="eventName" name="eventName" placeholder="Enter the event name" required>
             </div>
 
+            <!-- Event Type -->
             <div class="form-group">
                 <label for="eventType">Event Type:</label>
                 <select id="eventType" name="eventType" required>
                     <option value="">Select an event type</option>
-                    <option value="oneOffShow">One Off Show</option>
-                    <option value="tour">Tour</option>
+                    <option value="ukTour">UK Tour</option>
+                    <option value="euTour">EU Tour</option>
                     <option value="corporateEvent">Corporate Event</option>
+                    <option value="oneOffShow">One Off Show</option>
                     <option value="theatreShow">Theatre Show</option>
+                    <option value="festival">Festival</option>
                 </select>
             </div>
 
+            <!-- Event Dates -->
             <div class="form-group">
-                <label for="schedule">Schedule:</label>
-                <div id="schedule">
-                    <!-- Schedule items will be dynamically added here -->
+                <label for="eventDates">Event Dates:</label>
+                <div id="eventDates">
+                    <div class="date-item">
+                        <input type="date" name="eventDate" required>
+                        <button type="button" class="remove-date">Remove</button>
+                    </div>
                 </div>
-                <button type="button" id="addScheduleItem">Add Schedule Item</button>
+                <button type="button" id="addDate" class="btn">Add Date</button>
             </div>
 
+            <!-- Event Locations -->
+            <div class="form-group">
+                <label for="locations">Locations:</label>
+                <div id="locations">
+                    <div class="location-item">
+                        <input type="text" name="location" placeholder="Enter a location" required>
+                        <button type="button" class="remove-location">Remove</button>
+                    </div>
+                </div>
+                <button type="button" id="addLocation" class="btn">Add Location</button>
+            </div>
+
+            <!-- Additional Notes -->
+            <div class="form-group">
+                <label for="additionalNotes">Additional Notes:</label>
+                <textarea id="additionalNotes" name="additionalNotes" rows="4" placeholder="Enter any additional details"></textarea>
+            </div>
+
+            <!-- Form Actions -->
             <div class="form-actions">
-                <button id="submit">Save Event</button>
+                <button type="submit" id="submit" class="btn">Save Event</button>
             </div>
         </form>
     </div>
 
     <script src="scripts/eventinfo.js"></script>
-
 </body>
 </html>

@@ -59,7 +59,7 @@ function loadPageContent(page) {
         return;
     }
 
-    fetch(`pages/${page}`)
+    fetch(`${page}`)
         .then(response => {
             if (!response.ok) {
                 throw new Error(`HTTP error! status: ${response.status}`);
@@ -143,4 +143,14 @@ function handleEdit(row) {
 function handleDelete(row) {
     row.remove();
     console.log('Row deleted');
+
+fetch('http://localhost:3001/api/personnel')
+    .then(response => response.json())
+    .then(data => {
+        console.log('Personnel data:', data);
+        // Update your UI with the fetched data
+    })
+    .catch(error => console.error('Error fetching personnel:', error));
+
+
 }

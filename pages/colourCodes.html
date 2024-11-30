@@ -3,21 +3,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Event Information</title>
+    <title>Color Code Assignment</title>
     <link rel="stylesheet" href="styles/styles.css">
 </head>
 <body>
-                <!-- Main Content Area -->
-                <main class="main-content">
-                    <div id="content">
-                        <h2>Colour Codes</h2>
-                        <p>Colour Codes</p>
-                    </div>
-                </main>
-            </div>
-        </div>
-    
-        <script type="text/javascript" src="scripts/colourcodes.js"></script>
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="logo">Color Code Assignment</div>
+        <nav>
+            <ul>
+                <li><a href="#assignments">Assignments</a></li>
+                <li><a href="#add-new">Add New</a></li>
+                <li><a href="#repository">Repository</a></li>
+                <li><a href="#save">Save</a></li>
+            </ul>
+        </nav>
+    </header>
 
+    <!-- Main Content -->
+    <main class="main-content">
+        <section id="assignments">
+            <h1>Assign Colors to Areas</h1>
+            <p>Select colors from the repository and assign them to specific areas, locations, or uses.</p>
+
+            <!-- Assignment Form -->
+            <div class="assignment-form">
+                <label for="area-name">Area/Location/Use:</label>
+                <input type="text" id="area-name" placeholder="Enter area/location/use">
+
+                <label for="primary-color">Primary Color:</label>
+                <select id="primary-color">
+                    <option value="">Select a color</option>
+                    <option value="white" style="background-color: white;">White</option>
+                    <option value="black" style="background-color: black; color: white;">Black</option>
+                    <option value="grey" style="background-color: grey;">Grey</option>
+                    <option value="red" style="background-color: red;">Red</option>
+                    <option value="green" style="background-color: green;">Green</option>
+                    <option value="blue" style="background-color: blue;">Blue</option>
+                    <option value="pink" style="background-color: pink;">Pink</option>
+                    <option value="purple" style="background-color: purple;">Purple</option>
+                    <option value="yellow" style="background-color: yellow;">Yellow</option>
+                    <option value="fluorescent-yellow" style="background-color: #ccff00;">Fluorescent Yellow</option>
+                    <option value="orange" style="background-color: orange;">Orange</option>
+                    <option value="fluorescent-orange" style="background-color: #ff6600;">Fluorescent Orange</option>
+                    <option value="fluorescent-green" style="background-color: #00ff00;">Fluorescent Green</option>
+                    <option value="yellow-black-hazard" style="background: repeating-linear-gradient(45deg, yellow, yellow 10px, black 10px, black 20px);">Yellow/Black Hazard Tape</option>
+                    <option value="red-white-hazard" style="background: repeating-linear-gradient(45deg, red, red 10px, white 10px, white 20px);">Red/White Hazard Tape</option>
+                    <option value="green-white-hazard" style="background: repeating-linear-gradient(45deg, green, green 10px, white 10px, white 20px);">Green/White Hazard Tape</option>
+                    <option value="brown" style="background-color: brown;">Brown</option>
+                </select>
+
+                <label for="secondary-color">Secondary Color (Optional):</label>
+                <select id="secondary-color">
+                    <option value="">Select a color</option>
+                    <!-- Same color options as above -->
+                </select>
+
+                <button id="add-assignment" class="btn">Add Assignment</button>
+            </div>
+        </section>
+
+        <!-- Assignment Display -->
+        <section id="assignments-display">
+            <h2>Current Assignments</h2>
+            <ul id="assignment-list">
+                <!-- Dynamically populated list of assignments -->
+            </ul>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2024 MyApp. All rights reserved.</p>
+    </footer>
+
+    <!-- JS Script -->
+    <script src="scripts/color-assignments.js"></script>
 </body>
 </html>

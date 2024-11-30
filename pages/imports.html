@@ -3,21 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Event Information</title>
+    <title>Import Plots and Renders</title>
     <link rel="stylesheet" href="styles/styles.css">
 </head>
 <body>
-                <!-- Main Content Area -->
-                <main class="main-content">
-                    <div id="content">
-                        <h2>Import Plots and Renders</h2>
-                        <p>This page will be for the user to import existing plots, renders and supporting documents.</p>
-                    </div>
-                </main>
-            </div>
-        </div>
-    
-        <script src="scripts/imports.js"></script>
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="logo">Import Plots and Renders</div>
+        <nav>
+            <ul>
+                <li><a href="#import-section">Import</a></li>
+                <li><a href="#uploaded-files">Uploaded Files</a></li>
+                <li><a href="#help">Help</a></li>
+            </ul>
+        </nav>
+    </header>
 
+    <!-- Main Content -->
+    <main class="main-content">
+        <section id="import-section">
+            <h1>Import Your Files</h1>
+            <p>Upload your existing plots, renders, and supporting documents. Supported formats include CSV, XML and PDF</p>
+
+            <!-- File Upload Form -->
+            <div class="upload-form">
+                <label for="file-input">Choose files to upload:</label>
+                <input type="file" id="file-input" multiple accept=".csv, .xml">
+                <button id="upload-button" class="btn">Upload</button>
+            </div>
+        </section>
+
+        <!-- Uploaded Files Section -->
+        <section id="uploaded-files">
+            <h2>Uploaded Files</h2>
+            <p>View and manage your uploaded files below:</p>
+            <table class="file-table">
+                <thead>
+                    <tr>
+                        <th>File Name</th>
+                        <th>Type</th>
+                        <th>Size</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="file-list">
+                    <!-- Dynamically populated with uploaded files -->
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2024 MyApp. All rights reserved.</p>
+    </footer>
+
+    <!-- JS Script -->
+    <script src="scripts/imports.js"></script>
 </body>
 </html>

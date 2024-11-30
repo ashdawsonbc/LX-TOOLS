@@ -1,0 +1,206 @@
+/* General Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9; /* Light background for better contrast */
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+    transition: margin-left 0.3s; /* Smooth transition for container shift */
+}
+
+/* Drawer styles */
+.drawer {
+    width: 250px;
+    background-color: #656bac;
+    color: #fff;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: translateX(-250px); /* Hide drawer off-screen */
+    transition: transform 0.3s ease; /* Smooth transition for drawer slide */
+}
+
+.drawer .logo {
+    max-width: 90%; /* Ensure logo scales down if too large */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Remove extra space below image */
+    margin: -20px auto 20px; /* Center image horizontally */
+}
+
+.show-drawer .drawer {
+    transform: translateX(0); /* Move drawer into view */
+}
+
+/* Content styles */
+.main-wrapper {
+    flex-grow: 1;
+    transition: margin-left 0.3s; /* Smooth transition for content shift */
+    margin-left: 0; /* Default margin when drawer is hidden */
+}
+
+.show-drawer .main-wrapper {
+    margin-left: 250px; /* Shift content area when drawer is visible */
+}
+
+.top-bar {
+    background-color: #0d229b;
+    color: #fff;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.menu-button {
+    font-size: 24px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    color: #fff;
+}
+
+.main-content {
+    padding: 20px;
+    overflow-y: auto; /* Allow scrolling if content exceeds the height */
+}
+
+/* Navigation styles */
+.nav-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-menu li {
+    margin: 0;
+    padding: 10px 20px;
+}
+
+.nav-menu a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+}
+
+.submenu-list {
+    display: none;
+    list-style: none;
+    padding-left: 20px;
+}
+
+.submenu-list.open {
+    display: block;
+}
+
+.toggle-icon {
+    float: right;
+}
+
+.drawer-footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.footer-icon {
+    margin: 0 10px;
+    color: #fff;
+}
+
+/* Form and Table styles */
+.form-group {
+    margin-bottom: 15px; /* Space between form fields */
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; /* Include padding in width calculation */
+}
+
+button {
+    display: inline-block;
+    padding: 10px 15px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Smooth transition for button hover */
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.form-actions {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.schedule-item {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #f1f1f1;
+}
+
+.removeScheduleItem {
+    background-color: #dc3545;
+    transition: background-color 0.3s ease; /* Smooth transition for button hover */
+}
+
+.removeScheduleItem:hover {
+    background-color: #c82333;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table th,
+table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+table th {
+    background-color: #333;
+    color: #fff;
+}
+
+/* Button Styles */
+.btn {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    display: inline-block;
+    transition: background-color 0.3s ease; /* Smooth transition for button hover */
+}
+
+.btn:hover {
+    background-color: #555;
+}

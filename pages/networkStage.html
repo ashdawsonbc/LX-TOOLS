@@ -3,21 +3,96 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Event Information</title>
+    <title>Stage Networking</title>
     <link rel="stylesheet" href="styles/styles.css">
 </head>
 <body>
-                <!-- Main Content Area -->
-                <main class="main-content">
-                    <div id="content">
-                        <h2>Stage Networking</h2>
-                        <p>All stage networking peripherals, ip addresses, protocols etc</p>
-                    </div>
-                </main>
-            </div>
-        </div>
-    
-<script src="scripts/networkStage.js"></script>
+    <!-- Main Content -->
+    <main class="main-content">
+        <section id="stage-networking">
+            <h1>Stage Networking</h1>
+            <p>Manage and document the network devices at the stage end of your setup.</p>
 
+            <!-- Device Input Form -->
+            <form id="network-device-form" class="form">
+                <div class="form-group">
+                    <label for="device-type">Device Type</label>
+                    <select id="device-type" name="device-type" required>
+                        <option value="">Select Device</option>
+                        <option value="luminex-switch">Luminex Switch</option>
+                        <option value="grandma">GrandMA Console</option>
+                        <option value="dmx-node">DMX Node</option>
+                        <option value="computer">Computer</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="device-name">Device Name</label>
+                    <input type="text" id="device-name" name="device-name" placeholder="e.g., Luminex Gigacore 26i" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="ip-address">IP Address</label>
+                    <input type="text" id="ip-address" name="ip-address" placeholder="e.g., 192.168.1.1" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="mac-address">MAC Address</label>
+                    <input type="text" id="mac-address" name="mac-address" placeholder="e.g., 00:1A:2B:3C:4D:5E">
+                </div>
+
+                <div class="form-group">
+                    <label for="port-config">Port Configuration</label>
+                    <textarea id="port-config" name="port-config" rows="3" placeholder="e.g., Port 1: DMX Node 1, Port 2: GrandMA Console"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="notes">Notes</label>
+                    <textarea id="notes" name="notes" rows="3" placeholder="Any additional information"></textarea>
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" class="btn">Add Device</button>
+                </div>
+            </form>
+
+            <!-- Device List -->
+            <section id="device-list">
+                <h2>Network Devices</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Type</th>
+                            <th>Name</th>
+                            <th>IP Address</th>
+                            <th>MAC Address</th>
+                            <th>Port Config</th>
+                            <th>Notes</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="device-list-body">
+                        <!-- Dynamically populated device rows -->
+                        <tr>
+                            <td>Luminex Switch</td>
+                            <td>Gigacore 26i</td>
+                            <td>192.168.1.1</td>
+                            <td>00:1A:2B:3C:4D:5E</td>
+                            <td>Port 1: DMX Node 1</td>
+                            <td>Main switch at stage left</td>
+                            <td>
+                                <button class="btn edit-btn">Edit</button>
+                                <button class="btn delete-btn">Delete</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </section>
+    </main>
+
+    <!-- JS Script -->
+    <script src="scripts/stage-networking.js"></script>
 </body>
 </html>

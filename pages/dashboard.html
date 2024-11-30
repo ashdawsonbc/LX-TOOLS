@@ -3,21 +3,98 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Event Information</title>
+    <title>Project Dashboard</title>
     <link rel="stylesheet" href="styles/styles.css">
 </head>
 <body>
-                <!-- Main Content Area -->
-                <main class="main-content">
-                    <div id="content">
-                        <h2>Dashboard</h2>
-                        <p>Typical Home page with general information and options related to creating, editing, deleting and importing projects.</p>
-                    </div>
-                </main>
-            </div>
-        </div>
-    
-<script src="scripts/dashboard.js"></script>
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="logo">Project Dashboard</div>
+        <nav>
+            <ul>
+                <li><a href="#overview">Project Overview</a></li>
+                <li><a href="#tools">Tools</a></li>
+                <li><a href="#team">Team</a></li>
+                <li><a href="#reports">Reports</a></li>
+            </ul>
+        </nav>
+    </header>
 
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Project Information -->
+        <section id="project-info">
+            <h1>Project: <span id="project-name">Loaded Project Name</span></h1>
+            <p><strong>Type:</strong> <span id="project-type">UK Tour</span></p>
+            <p><strong>Start Date:</strong> <span id="start-date">01-01-2024</span></p>
+            <p><strong>End Date:</strong> <span id="end-date">31-12-2024</span></p>
+            <p><strong>Locations:</strong> <span id="locations">Multiple Locations</span></p>
+        </section>
+
+        <!-- Quick Actions -->
+        <section id="quick-actions">
+            <h2>Quick Actions</h2>
+            <div class="dashboard-grid">
+                <div class="card">
+                    <h3>Fixture Patch</h3>
+                    <p>Manage and update your lighting fixture patch.</p>
+                    <button class="btn">Open</button>
+                </div>
+                <div class="card">
+                    <h3>Color Codes</h3>
+                    <p>View and assign color codes for the project.</p>
+                    <button class="btn">Open</button>
+                </div>
+                <div class="card">
+                    <h3>Import Data</h3>
+                    <p>Upload additional project data (e.g., CSV or XML).</p>
+                    <button class="btn">Import</button>
+                </div>
+                <div class="card">
+                    <h3>Generate Reports</h3>
+                    <p>Create project summaries and analytics reports.</p>
+                    <button class="btn">Generate</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Statistics -->
+        <section id="statistics">
+            <h2>Project Insights</h2>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <h3>Tasks</h3>
+                    <p><span id="tasks-completed">15</span> / <span id="tasks-total">20</span> Completed</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Team Members</h3>
+                    <p><span id="team-size">8</span> Assigned</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Files Uploaded</h3>
+                    <p><span id="files-uploaded">12</span> Documents</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Shortcuts -->
+        <section id="shortcuts">
+            <h2>Tools and Shortcuts</h2>
+            <ul class="shortcut-list">
+                <li><a href="fixture-patch.html">Fixture Patch</a></li>
+                <li><a href="color-codes.html">Color Code Management</a></li>
+                <li><a href="schedule.html">Project Schedule</a></li>
+                <li><a href="team-management.html">Team Management</a></li>
+            </ul>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2024 MyApp. All rights reserved.</p>
+    </footer>
+
+    <!-- JS Script -->
+    <script src="scripts/dashboard.js"></script>
 </body>
 </html>

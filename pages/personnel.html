@@ -4,106 +4,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Personnel Management</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-        }
-        .main-content {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-bottom: 20px;
-        }
-        th, td {
-            padding: 10px;
-            border: 1px solid #ddd;
-            text-align: left;
-        }
-        th {
-            background-color: #f4f4f4;
-        }
-        .btn {
-            padding: 10px 15px;
-            background-color: #007bff;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        .btn:hover {
-            background-color: #0056b3;
-        }
-        .edit-btn, .delete-btn, .save-btn {
-            background-color: transparent;
-            border: none;
-            cursor: pointer;
-            font-size: 16px;
-        }
-        .edit-btn {
-            color: #ffc107;
-        }
-        .delete-btn {
-            color: #dc3545;
-        }
-        .save-btn {
-            color: #28a745;
-        }
-        .edit-btn::before {
-            content: '✎'; /* Pencil icon for edit */
-        }
-        .save-btn::before {
-            content: '✔'; /* Green tick */
-        }
-        .delete-btn::before {
-            content: '✘'; /* Red cross */
-        }
-        .non-editable {
-            pointer-events: none;
-            background-color: #f9f9f9;
-        }
-    </style>
+    <link rel="stylesheet" href="styles/styles.css">
 </head>
 <body>
     <div class="main-content">
         <h2>Personnel Management</h2>
+        <p>Use this page to manage information about your team members. Add, edit, or delete personnel details as needed.</p>
+
+        <!-- Table for Personnel Data -->
         <table id="personnelTable">
             <thead>
                 <tr>
                     <th>Name</th>
-                    <th>Number</th>
+                    <th>Contact Number</th>
                     <th>Email</th>
                     <th>Job Role</th>
+                    <th>Department</th>
                     <th>Actions</th>
                 </tr>
             </thead>
             <tbody>
+                <!-- Example personnel row -->
                 <tr>
-                    <td contenteditable="false" class="non-editable">John Doe</td>
-                    <td contenteditable="false" class="non-editable">
-                        <select disabled>
-                            <option value="+1">+1 (US)</option>
-                            <option value="+44">+44 (UK)</option>
-                            <option value="+91">+91 (India)</option>
-                            <!-- Add more dialing codes as needed -->
-                        </select>
-                        1234567890
-                    </td>
-                    <td contenteditable="false" class="non-editable">john.doe@example.com</td>
-                    <td contenteditable="false" class="non-editable">Developer</td>
+                    <td>John Doe</td>
+                    <td>+44 123456789</td>
+                    <td>john.doe@example.com</td>
+                    <td>Technician</td>
+                    <td>Operations</td>
                     <td>
-                        <button class="edit-btn"></button>
-                        <button class="save-btn"></button>
-                        <button class="delete-btn"></button>
+                        <button class="edit-btn">Edit</button>
+                        <button class="delete-btn">Delete</button>
                     </td>
                 </tr>
             </tbody>
         </table>
-        <button id="addRowBtn" class="btn">Add New Member</button>
+
+        <!-- Add New Member Button -->
+        <button id="addPersonnelBtn">Add New Member</button>
     </div>
+
     <script src="scripts/personnel.js"></script>
 </body>
 </html>
