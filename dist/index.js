@@ -103,7 +103,7 @@ function createWindow() {
             nodeIntegration: false,
         },
     });
-    mainWindow.loadURL(path_1.default.join(__dirname, '../pages/index.html'));
+    mainWindow.loadURL(path_1.default.join(__dirname, '../pages/welcome.html'));
     mainWindow.on('closed', () => {
         mainWindow = null;
     });

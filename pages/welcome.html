@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome - Project Manager</title>
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="logo">MyApp Project Manager</div>
+    </header>
+
+    <main class="main-content">
+        <section id="welcome">
+            <h1>Welcome to MyApp</h1>
+            <p>Manage your projects or create new ones below.</p>
+
+            <!-- Project List -->
+            <section id="project-list">
+                <h2>Your Projects</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Project Name</th>
+                            <th>Date Modified</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="project-table-body">
+                        <!-- Example project row -->
+                        <tr>
+                            <td>Stage Setup Alpha</td>
+                            <td>2024-11-27</td>
+                            <td>
+                                <button class="btn open-btn" onclick="openProject('Stage Setup Alpha')">Open</button>
+                                <button class="btn edit-btn" onclick="editProject('Stage Setup Alpha')">Edit</button>
+                                <button class="btn delete-btn" onclick="deleteProject('Stage Setup Alpha')">Delete</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- Action Buttons -->
+            <section id="project-actions">
+                <button class="btn create-btn" onclick="createNewProject()">Create New Project</button>
+                <button class="btn import-btn" onclick="importProject()">Import Project</button>
+            </section>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2024 MyApp. All rights reserved.</p>
+    </footer>
+
+    <script src="scripts/welcome.js"></script>
+</body>
+</html>
